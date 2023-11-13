@@ -9,11 +9,11 @@ import org.springframework.context.ConfigurableApplicationContext;
  * @date 2023/11/13 11:52
  */
 @SpringBootApplication
-public class MavenSpring1 {
+public class MavenSpring3 {
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(MavenSpring1.class);
-        app.setAdditionalProfiles("dev");
+        SpringApplication app = new SpringApplication(MavenSpring3.class);
+        app.setAdditionalProfiles("my");
         ConfigurableApplicationContext context = app.run(args);
-        System.out.println(context.getEnvironment().getProperty("lm1.name"));
+        System.out.println(context.getEnvironment().getProperty("lm4.name"));
     }
 }
