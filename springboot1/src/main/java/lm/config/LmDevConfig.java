@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 /**
  * @author ming.li
  * @date 2023/11/13 13:36
- * 此时和LmConfig的区别是需要MavenSpring1启动时引入
+ * 此时和LmConfig的区别是需要MavenSpring1启动时引入，否则全部为空
  */
 @Configuration
 @PropertySource("classpath:application-dev.yml")
