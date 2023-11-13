@@ -1,7 +1,8 @@
 package lm.controller;
 
-import com.maven.lm.config.LmConfig;
-import com.maven.lm.config.LmDevConfig;
+
+import lm.config.LmConfig;
+import lm.config.LmDevConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
