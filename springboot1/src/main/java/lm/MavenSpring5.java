@@ -3,6 +3,7 @@ package lm;
 import lm.bean.User1;
 import lm.bean.User2;
 import lm.bean.User3;
+import lm.bean.User4;
 import lm.config.MyImportSelector;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,5 +21,6 @@ public class MavenSpring5 {
         ConfigurableApplicationContext context = SpringApplication.run(MavenSpring5.class, args);
 
         System.out.println(context.getBean(User3.class));
+        System.out.println(context.getBean(User4.class));
     }
 }
