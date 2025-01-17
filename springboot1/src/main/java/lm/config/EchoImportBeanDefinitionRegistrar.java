@@ -20,6 +20,7 @@ public class EchoImportBeanDefinitionRegistrar implements ImportBeanDefinitionRe
         Map<String, Object> objectMap = annotationMetadata.getAnnotationAttributes(EnableEcho.class.getName());
         String[] strings=(String[])objectMap.get("packages");
         List<String> list = Arrays.asList(strings);
+        System.out.println("list的值:"+list);
         builder.addPropertyValue("packages",list);
         System.out.println("list.size:"+list.size());
         beanDefinitionRegistry.registerBeanDefinition("builder",builder.getBeanDefinition());

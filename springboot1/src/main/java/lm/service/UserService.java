@@ -19,6 +19,5 @@ public class UserService {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
     }
 }

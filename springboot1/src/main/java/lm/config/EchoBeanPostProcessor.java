@@ -13,7 +13,7 @@ public class EchoBeanPostProcessor implements BeanPostProcessor {
     private List<String> packages;
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println("EchoBeanPostProcessor:"+bean.getClass().getName());
+        //System.out.println("EchoBeanPostProcessor读取到的类:"+bean.getClass().getName());
         return bean;
     }
 

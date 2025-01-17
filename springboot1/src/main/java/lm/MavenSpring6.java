@@ -18,6 +18,7 @@ import org.springframework.context.annotation.Import;
 @SpringBootApplication
 @Import({MyImportBeanDefinitionRegistrar.class})
 public class MavenSpring6 {
+    //通过@Import引入的MyImportBeanDefinitionRegistrar引入User5到bean
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(MavenSpring6.class, args);
         System.out.println(context.getBean(User5.class));

@@ -17,6 +17,7 @@ import org.springframework.context.annotation.Import;
 @SpringBootApplication
 @Import({User2.class, MyImportSelector.class})
 public class MavenSpring5 {
+    //User3在@Import引入的MyImportSelector里面引入，但是User4没有地方引入到bean里面，所以不存在
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(MavenSpring5.class, args);
 
