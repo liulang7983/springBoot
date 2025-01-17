@@ -16,7 +16,6 @@ public class UserService {
                 Thread.sleep(100);
                 System.out.println("我在初始化");
             }
-
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

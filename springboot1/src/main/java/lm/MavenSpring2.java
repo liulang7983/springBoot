@@ -14,6 +14,7 @@ import org.springframework.context.annotation.Import;
 @SpringBootApplication
 @Import({User2.class})
 public class MavenSpring2 {
+    //User自己@Component引入bean了,User1在BeanConfiguration@bean了,User2在本类中@Import引入了
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(MavenSpring2.class, args);
         System.out.println(context.getBean("user"));

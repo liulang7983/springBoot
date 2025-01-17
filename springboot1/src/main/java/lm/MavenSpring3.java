@@ -10,6 +10,7 @@ import org.springframework.context.ConfigurableApplicationContext;
  */
 @SpringBootApplication
 public class MavenSpring3 {
+    //lm4.name是MyEnvironmentPostProcessor从外部引入进来的配置
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(MavenSpring3.class);
         ConfigurableApplicationContext context = app.run(args);

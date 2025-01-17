@@ -21,7 +21,7 @@ public class MyEnvironmentPostProcessor implements EnvironmentPostProcessor {
     public void postProcessEnvironment(ConfigurableEnvironment environment, SpringApplication application) {
         try {
             //外部导入只支持properties，yml会获取不到
-            FileInputStream file = new FileInputStream("C:\\gitLiming\\application-c.properties");
+            FileInputStream file = new FileInputStream("C:\\liming\\gitLiming\\application-c.properties");
             Properties properties = new Properties();
             properties.load(file);
             System.out.println("导入:"+properties.getProperty("lm4.name"));

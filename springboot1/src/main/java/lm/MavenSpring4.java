@@ -16,7 +16,7 @@ public class MavenSpring4 {
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(MavenSpring4.class);
         ConfigurableApplicationContext context = app.run(args);
-        //此时这连个方法会开启县城吃去u处理，然后继续往下走
+        //此时这两个方法会开启线程去异步处理，然后继续往下走
         context.getBean(Runnable.class).run();
         context.getBean(UserService.class).init();
         System.out.println("启动完成");
