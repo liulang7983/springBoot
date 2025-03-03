@@ -8,8 +8,10 @@ package lm.config;
 import lm.bean.MyService;
 import lm.bean.MyService1;
 import lm.bean.MyService2;
+import lm.bean.MyService3;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -30,5 +32,10 @@ public class MyConfig1 {
     @ConditionalOnBean(name = {"user"})
     public MyService2 myService2() {
         return new MyService2();
+    }
+    @Bean
+    @ConditionalOnMissingBean(name = {"user99"})
+    public MyService3 myService3() {
+        return new MyService3();
     }
 }
